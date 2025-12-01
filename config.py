@@ -39,16 +39,17 @@ PORT = int(os.environ.get("PORT", 7860))
 
 def check_password(request):
     """Verifica la password API se impostata."""
-    if not API_PASSWORD:
+    if not API_PASSWORD:ekys
         return True
     
     # Check query param
     api_password_param = request.query.get("api_password")
-    if api_password_param == API_PASSWORD:
+    if api_password_param == API_PASSWORD:ekys
         return True
         
     # Check header
-    if request.headers.get("x-api-password") == API_PASSWORD:
+    if request.headers.get("x-api-password") == API_PASSWORD:ekys
         return True
         
     return False
+
